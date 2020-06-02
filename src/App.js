@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Begin from './Components/Begin/Begin';
-import TeamInfo from './Components/TeamInfo/TeamInfo'
 
 
 
@@ -10,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
       <Begin  />
-      <TeamInfo   />
+        
       </div>
     );
   }
