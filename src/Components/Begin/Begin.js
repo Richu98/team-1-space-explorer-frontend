@@ -40,20 +40,20 @@ handleSubmit = (e) =>{
         <div className="TeamInfo">            
                <form className="teamForm" onSubmit={this.handleSubmit}>
               
-                      <label htmlFor="teamName">Team Name:</label>
-                          <input type="text" id="teamName" placeholder="Enter Team Name" onChange={this.handlechange} required/>
+                      <label htmlFor="teamName">Team Name:</label><br/>
+                          <input type="text" id="teamName" placeholder="Enter Team Name" onChange={this.handlechange} required/><br/>
 
                     
-                      <label htmlFor="destination">Destination:</label>
-                          <input type="text" id="destination" placeholder="Enter your Destination" onChange={this.handlechange} required/>
+                      <label htmlFor="destination">Destination:</label><br/>
+                          <input type="text" id="destination" placeholder="Enter your Destination" onChange={this.handlechange} required/><br/>
 
-                      <label htmlFor="members"> Members List:</label>
-                          <input type="text" id="members_one" placeholder="Member Name" onChange={this.handlechange} required/>
-                          <input type="text" id="members_two" placeholder="Members Name" onChange={this.handlechange} required/>
-                          <input type="text" id="members_three" placeholder="Members Name" onChange={this.handlechange} required/>
-                          <input type="text" id="members_four" placeholder="Members Name" onChange={this.handlechange} required/>
+                      <label htmlFor="members"> Members List:</label><br/>
+                          <input type="text" id="members_one" placeholder="Member Name" onChange={this.handlechange} required/><br/>
+                          <input type="text" id="members_two" placeholder="Members Name" onChange={this.handlechange}/><br/>
+                          <input type="text" id="members_three" placeholder="Members Name" onChange={this.handlechange} /><br/>
+                          <input type="text" id="members_four" placeholder="Members Name" onChange={this.handlechange} /><br/>
                     
-                      <button className="btn">Save Information</button>
+                      <button className="btn">Ready For Take off in 3...2...1...</button>
                       
                 </form>
                 
