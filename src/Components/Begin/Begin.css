@@ -10,7 +10,7 @@
    
 
         
-.TeamInfo{padding-top: 30px;display: flex;font-family: 'Architects Daughter',cursive;margin-top: 100px;padding-left: 50px;position: absolute; left: 40%;height: 80vh;width: 400px;font-size: 33px;font-weight: bolder;background-color:rgba(0, 0,0,0.4);}
+.TeamInfo{padding-top: 30px;display:flex;font-family: 'Architects Daughter',cursive;margin-top: 100px;padding-left: 50px;position: absolute; left: 40%;width: 400px;font-size: 33px;font-weight: bolder;background-color:rgba(0, 0,0,0.4);}
 
 input[type="text"]{padding: 5px 5px;margin-left: 40px;border-radius: 10px;}
 
@@ -18,9 +18,9 @@ input[type="text"]{padding: 5px 5px;margin-left: 40px;border-radius: 10px;}
 .addmem{border-radius: 15px;background-color: green;color: white;font-weight: bold;cursor: pointer;margin-left: 20px;}
 .addmem:hover{background-color: green;color: white;}
 
+.teammem{margin-left: 50px;font-size: 20px;}
 
-
-.btn{font-size: 20px;border-radius: 12px;transition-duration: 0.4s;background-color: red;font-weight:bold;cursor: pointer;margin-top: 40px;margin-left: 10px;}
+.btn{font-size: 20px;border-radius: 12px;transition-duration: 0.4s;background-color: red;font-weight:bold;cursor: pointer;margin-top: 25px;margin-left: 10px;display: flex;margin-bottom: 20px;}
 .btn:hover{background-color: rgba(0, 0,0,0.4);color: white;}
 
 
