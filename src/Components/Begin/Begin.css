@@ -1,35 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Playfair+Display+SC:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
 *{padding: 0%; margin: 0%;box-sizing: border-box;}
+body{width: 100%;height:100%;background-image: url('../Images/milky-way.png') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat; color: white;}
+.Begin {font-family: 'Monoton', cursive;display: flex;}
 
-.Begin {font-family: 'Dancing Script', cursive;width: 100%; height: 100vh;  background-image: url('./milky-way.png');background-attachment: fixed; background-size: cover; background-position: center; background-repeat: no-repeat; color: white;display: flex;}
-
-.header{width: 40%;height: 20%;}
-.header h1{font-size: 70px; margin-left: 50px;}
-.header h2{font-size: 35px;margin-left: 85px;} 
+.header h1{font-size: 50px;margin-left: 40px;color: #f0a500;}
+.header h2{font-size: 35px;margin-left: 50px;color: #f0a500;}
    
 
         
-.TeamInfo{padding-top: 30px;display:flex;font-family: 'Architects Daughter',cursive;margin-top: 100px;padding-left: 50px;position: absolute; left: 40%;width: 400px;font-size: 33px;font-weight: bolder;background-color:rgba(0, 0,0,0.4);}
+.TeamInfo{font-family: 'Playfair Display SC', serif;font-size: 33px;font-weight: bolder;background-color:rgba(0, 0,0,0.4);padding: 50px 40px;color:#10C8FA ;}
 
 input[type="text"]{padding: 5px 5px;margin-left: 40px;border-radius: 10px;}
 
 
-.addmem{border-radius: 15px;background-color: green;color: white;font-weight: bold;cursor: pointer;margin-left: 20px;}
-.addmem:hover{background-color: green;color: white;}
-
-.teammem{margin-left: 50px;font-size: 20px;}
-
-.btn{font-size: 20px;border-radius: 12px;transition-duration: 0.4s;background-color: red;font-weight:bold;cursor: pointer;margin-top: 25px;margin-left: 10px;display: flex;margin-bottom: 20px;}
-.btn:hover{background-color: rgba(0, 0,0,0.4);color: white;}
+.addmem{border-radius: 15px;background-color: #52de97;color: black;font-weight: bolder;cursor: pointer;margin-left:20p;font-family: 'Playfair Display SC', serif;}
+.addmem:hover{background-color: #52de97;color: black;}
 
 
+.teammem{font-size: 50%;color: #9BFFFF;}
 
-        
-
+.btn{font-size: 20px;border-radius: 12px;transition-duration: 0.4s;background-color: #e43f5a;font-weight:bold;cursor: pointer;font-family: 'Playfair Display SC', serif;}
+.btn:hover{background-color: #e43f5a;color: white;}
 
         
-        
-        
-    
+@media (max-width: 950px){
+    .header h1{font-size: 25px;}
+    .header h2{font-size: 15px;}
+    .TeamInfo{font-size: 10px;}
+    .btn{font-size: 8px;}
+}
                      
