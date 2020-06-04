@@ -2,31 +2,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
 *{padding: 0%; margin: 0%;box-sizing: border-box;}
 body{width: 100%;height:100%;background-image: url('../Images/milky-way.png') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat; color: white;}
-.Begin {font-family: 'Monoton', cursive;display: flex; flex-direction: column;}
+
+.Begin {font-family: 'Monoton', cursive; background-image: url('../Images/rocket.png') ;background-attachment:fixed; background-size: 230px; background-position-x: 85%; background-position-y: 50%; background-repeat: no-repeat;height: 100vh;}
+.Begin img{animation: blink 2s ease-in infinite;}
+@keyframes blink {
+    0%,100%{opacity: 0;}
+    50%{opacity: 1;}
+}
 
 .header h1{font-size: 50px;margin-left: 40px;color: #f0a500;}
 .header h2{font-size: 35px;margin-left: 50px;color: #f0a500;}
            
-.TeamInfo{font-family: 'Playfair Display SC', serif;font-size: 33px;font-weight: bolder;padding: 50px 40px;color:#10C8FA ;display: flex; }
+.TeamInfo{font-family: 'Playfair Display SC', serif;font-size:xx-large;font-weight:bolder;padding: 90px 90px;color:#81f5ff ;display: flex;justify-content:flex-start;}
 
-input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;box-shadow: 3px 3px 3px 3px;}
+input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;box-shadow:  4px 3px;font-family: 'Playfair Display SC', serif;font-size: large;}
 
 
-.btn_add{padding:5px 5px;;border-radius: 15px;background-color: #52de97;color: black;font-weight: bolder;cursor: pointer;font-family: 'Playfair Display SC', serif;}
+.btn_add{padding:5px 5px;;border-radius: 15px;background-color: #01d28e;color: black;font-weight: bolder;cursor: pointer;font-family: 'Playfair Display SC', serif;box-shadow: #393e46 3px 3px;}
 .btn_add:hover{background-color: black;color: #52de97;}
 
 
-.teammem{font-size: 50%;color: #9BFFFF;}
+.teammem{font-size: 50%;color: #ffffdd;margin-left: 5%;margin-top:10px;}
 
-.btn{padding:15px 15px;font-size: 20px;border-radius: 40px; transition-duration: 0.4s;font-weight:bold;cursor: pointer;font-family: 'Playfair Display SC', serif;}
+.btn{margin-top: 10px;padding: 15px 15px;font-size: 20px;border-radius: 40px; transition-duration: 0.4s;font-weight:bold;cursor: pointer;font-family: 'Playfair Display SC', serif;background-color: green;color: black;box-shadow: #393e46 3px 3px;}
 .btn:hover{color: white;}
 
         
-@media (max-width: 850px){
-    .header h1{font-size: 20px;}
+@media (max-width: 1134px){
+    .header h1{font-size: 150%;}
     .header h2{font-size: 15px;}
-    .TeamInfo{font-size: 15px;}
-    .btn{font-size: 8px;}
+    .TeamInfo{font-size: 120%;padding: 20px 20px;}
+    .btn{font-size: 90%;}
+    .btn_add{font-size: 50%;}
+    input[type="text"]{font-size: small;}
+    .Begin{background-size: 13%; background-position-x: 95%; background-position-y: 30%; background-repeat: no-repeat;}
+
 }
        
 
@@ -34,5 +44,6 @@ input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;bo
     .header h1{font-size: 100px;}
     .header h2{font-size: 50px;}
     .TeamInfo{font-size: 25px;}
-    .btn{font-size: 10px;}
+    .btn{font-size: 12px;}
+    .btn_add{font-size: 8px;}
 }

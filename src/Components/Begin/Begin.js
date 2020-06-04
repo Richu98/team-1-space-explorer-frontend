@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Begin.css';
+import Images from '../Images/milky-way.png';
+
 
 
 
