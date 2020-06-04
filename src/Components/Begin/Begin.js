@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Begin.css';
-import {Link,NavLink} from 'react-router-dom';
 
 
 
@@ -130,7 +129,7 @@ class Begin extends Component {
            
 
 
-          <Link to={"/Destination"}><button className="btn" onClick={this.handleSubmit} >Ready For Take off in 3...2...1...</button></Link>
+          <button className="btn" onClick={this.handleSubmit} >Ready For Take off in 3...2...1...</button>
 
           </form>
 
