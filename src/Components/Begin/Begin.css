@@ -3,7 +3,14 @@
 *{padding: 0%; margin: 0%;box-sizing: border-box;}
 body{width: 100%;height:100%;background-image: url('../Images/milky-way.png') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat; color: white;}
 
-.Begin {font-family: 'Monoton', cursive; background-image: url('../Images/rocket.png') ;background-attachment:fixed; background-size: 230px; background-position-x: 85%; background-position-y: 50%; background-repeat: no-repeat;height: 100vh;}
+.Begin {font-family: 'Monoton', cursive; background-image: url('../Images/rocket.png') ;background-attachment:fixed; background-size: 230px; background-position-x: 85%; background-position-y: 50%; background-repeat: no-repeat;height: 100vh; animation: rocket 2s linear infinite;
+}
+
+@keyframes rocket {0% {background-position-y:50%}
+    100% {background-position-y:10% }
+
+
+}
 
 
 .header h1{font-size: 50px;margin-left: 40px;color: #f0a500;}
@@ -24,7 +31,7 @@ input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;bo
 .btn:hover{color: white;}
 
         
-@media (max-width: 1134px){
+@media (max-width: 850px){
     .header h1{font-size: 150%;}
     .header h2{font-size: 15px;}
     .TeamInfo{font-size: 120%;padding: 20px 20px;}
@@ -37,9 +44,16 @@ input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;bo
        
 
 @media (min-width: 1920px){
-    .header h1{font-size: 100px;}
-    .header h2{font-size: 50px;}
-    .TeamInfo{font-size: 25px;}
-    .btn{font-size: 12px;}
-    .btn_add{font-size: 8px;}
+    .header h1{font-size: 150px;}
+    .header h2{font-size: 60px;}
+    .TeamInfo{font-size: 55px;}
+    .btn{font-size: 30%;}
+    .btn_add{font-size: 50%;}
+    .Begin{
+        animation: rocket 5s linear infinite;
+    }
+    @keyframes rocket {0% {background-position-y:50%} 100% {background-position-y:10% } }
 }
+
+
+

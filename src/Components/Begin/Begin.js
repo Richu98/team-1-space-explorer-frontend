@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './Begin.css';
-import Images from '../Images/milky-way.png';
 
 
 
@@ -24,7 +24,21 @@ class Begin extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+
+      const astronauts = { 
+        teamName: this.state.teamName,
+        destination: this.state.destination,
+        members: this.state.members,
+        spaceShipName: this.state.spaceShipName,
+        mission: this.state.mission
+      }
+
+      console.log(astronauts); 
+
+    axios.post('https://api-space-explorer.herokuapp.com/api/astronauts',{astronauts})
+    .then(res =>{
+      console.log(res);
+    })
   }
 
   /*--------for Member Array function-------- */
@@ -95,20 +109,21 @@ class Begin extends Component {
 
                   {/*-------button for add members to array*/}
                    <button className="btn_add" onClick={this.addPeople}>Add The Member</button> 
-             
+
+                    {/*----Rendering Member Data------ */}
+                  {
+                    this.state.members.map((data, index) => {
+                      return (
+                        <div className="teammem" key={index}>
+                            <p>{data.name}</p>
+                        </div>
+                      );
+                    })
+                  }
               </div>
             
 
-            {/*----Rendering Member Data------ */}
-            {
-              this.state.members.map((data, index) => {
-                return (
-                  <div className="teammem" key={index}>
-                      <p>{data.name}</p>
-                  </div>
-                );
-              })
-            }
+           
 
 
             <button className="btn" >Ready For Take off in 3...2...1...</button>
