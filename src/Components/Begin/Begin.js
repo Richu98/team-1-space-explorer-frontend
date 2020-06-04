@@ -40,6 +40,9 @@ class Begin extends Component {
     .then(res =>{
       console.log(res);
     })
+   
+    this.props.history.push("/Destination");
+    
   }
 
   /*--------for Member Array function-------- */
@@ -127,7 +130,7 @@ class Begin extends Component {
            
 
 
-          <Link to={"/Destination"}><button className="btn" >Ready For Take off in 3...2...1...</button></Link>
+          <Link to={"/Destination"}><button className="btn" onClick={this.handleSubmit} >Ready For Take off in 3...2...1...</button></Link>
 
           </form>
 
