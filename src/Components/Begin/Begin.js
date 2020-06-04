@@ -36,7 +36,7 @@ class Begin extends Component {
 
       console.log(astronauts); 
 
-    axios.post('https://api-space-explorer.herokuapp.com/api/astronauts', astronauts)
+    axios.post('https://api-space-explorer.herokuapp.com/api/astronauts', {astronauts})
     .then(res =>{
       console.log(res);
     })
@@ -127,7 +127,7 @@ class Begin extends Component {
            
 
 
-          <NavLink to={"/Destination"}><button className="btn" >Ready For Take off in 3...2...1...</button></NavLink>
+          <Link to={"/Destination"}><button className="btn" >Ready For Take off in 3...2...1...</button></Link>
 
           </form>
 
