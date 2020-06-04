@@ -13,9 +13,9 @@ class App extends Component {
         <div className="App">
           <Begin />  
           <Switch>
-            <Route exact path="./" Component={Begin}/>
-            <Route  path="./destination" Component={Destination}/>
-            <Route  path="./return" Component={Return}/>
+            <Route exact path="/" Component={Begin}/>
+            <Route path="/Destination" Component={Destination}/>
+            <Route path="/return" Component={Return}/>
           </Switch>
         </div>
       </BrowserRouter>

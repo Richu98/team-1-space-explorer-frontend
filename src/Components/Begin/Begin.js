@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Begin.css';
+import {Link,NavLink} from 'react-router-dom';
 
 
 
@@ -35,7 +36,7 @@ class Begin extends Component {
 
       console.log(astronauts); 
 
-    axios.post('https://api-space-explorer.herokuapp.com/api/astronauts',{astronauts})
+    axios.post('https://api-space-explorer.herokuapp.com/api/astronauts', astronauts)
     .then(res =>{
       console.log(res);
     })
@@ -126,7 +127,7 @@ class Begin extends Component {
            
 
 
-            <button className="btn" >Ready For Take off in 3...2...1...</button>
+          <NavLink to={"/Destination"}><button className="btn" >Ready For Take off in 3...2...1...</button></NavLink>
 
           </form>
 
