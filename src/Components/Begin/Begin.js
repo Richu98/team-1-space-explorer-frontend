@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Begin.css';
-import Image from '../Images/milky-way.png';
+
 
 
 
@@ -16,7 +16,7 @@ class Begin extends Component {
 
   handlechange = (e) => {
     this.setState({
-      [e.target.id]: e.target.value
+      [e.target.id]: e.target.value 
     });
   }
 
@@ -62,27 +62,40 @@ class Begin extends Component {
         </div>
 
         {/* -----FORM----- */}
+
         <div className="TeamInfo">
           <form className="teamForm" autoComplete="off" onSubmit={this.handleSubmit}>
 
-            <label htmlFor="teamName">Team Name:</label><br />
-            <input type="text" id="teamName" placeholder="Enter Team Name" onChange={this.handlechange} required /><br />
 
+            <div>
+              <label htmlFor="teamName">Team Name:</label>
+                <input type="text" id="teamName" placeholder="Enter Team Name" onChange={this.handlechange} required />
+            </div>
 
-            <label htmlFor="destination">Destination:</label><br />
-            <input type="text" id="destination" placeholder="Enter your Destination" onChange={this.handlechange} required /><br />
+            <div>
+              <label htmlFor="destination">Destination:</label>
+                <input type="text" id="destination" placeholder="Enter your Destination" onChange={this.handlechange} required />
+            </div>
+            
+            <div>
+              <label htmlFor="spaceShipName">Spaceship Name:</label>
+                <input type="text" id="spaceShipName" placeholder="Enter SpaceShip Name" onChange={this.handlechange} required />
+            </div>
 
-            <label htmlFor="spaceShipName">Spaceship Name:</label><br />
-            <input type="text" id="spaceShipName" placeholder="Enter SpaceShip Name" onChange={this.handlechange} required /><br />
+              <div>
+                <label htmlFor="mission">Mission:</label>
+                  <input type="text" id="mission" placeholder="Enter Mission" onChange={this.handlechange} required />
+              </div>
 
-            <label htmlFor="mission">Mission:</label><br />
-            <input type="text" id="mission" placeholder="Enter Mission" onChange={this.handlechange} required /><br />
+              <div>
+                <label htmlFor="members"> Members List:</label>
+                  <input type="text" id="members" placeholder="Member Name" onChange={this.handleChangeArray} required />
 
-            <label htmlFor="members"> Members List:</label><br />
-            <input type="text" id="members" placeholder="Member Name" onChange={this.handleChangeArray} required />
-
-            {/*-------button for add members to array*/}
-            <button className="addmem" onClick={this.addPeople}>Add The Member</button> <br />
+                  {/*-------button for add members to array*/}
+                   <button className="btn_add" onClick={this.addPeople}>Add The Member</button> 
+             
+              </div>
+            
 
             {/*----Rendering Member Data------ */}
             {
@@ -101,7 +114,7 @@ class Begin extends Component {
           </form>
 
         </div>
-
+           
 
 
       </div>

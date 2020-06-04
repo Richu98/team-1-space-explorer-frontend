@@ -2,32 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
 *{padding: 0%; margin: 0%;box-sizing: border-box;}
 body{width: 100%;height:100%;background-image: url('../Images/milky-way.png') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat; color: white;}
-.Begin {font-family: 'Monoton', cursive;display: flex;}
+.Begin {font-family: 'Monoton', cursive;display: flex; flex-direction: column;}
 
 .header h1{font-size: 50px;margin-left: 40px;color: #f0a500;}
 .header h2{font-size: 35px;margin-left: 50px;color: #f0a500;}
-   
+           
+.TeamInfo{font-family: 'Playfair Display SC', serif;font-size: 33px;font-weight: bolder;padding: 50px 40px;color:#10C8FA ;display: flex; }
 
-        
-.TeamInfo{font-family: 'Playfair Display SC', serif;font-size: 33px;font-weight: bolder;background-color:rgba(0, 0,0,0.4);padding: 50px 40px;color:#10C8FA ;}
-
-input[type="text"]{padding: 5px 5px;margin-left: 40px;border-radius: 10px;}
+input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;box-shadow: 3px 3px 3px 3px;}
 
 
-.addmem{border-radius: 15px;background-color: #52de97;color: black;font-weight: bolder;cursor: pointer;margin-left:20p;font-family: 'Playfair Display SC', serif;}
-.addmem:hover{background-color: #52de97;color: black;}
+.btn_add{padding:5px 5px;;border-radius: 15px;background-color: #52de97;color: black;font-weight: bolder;cursor: pointer;font-family: 'Playfair Display SC', serif;}
+.btn_add:hover{background-color: black;color: #52de97;}
 
 
 .teammem{font-size: 50%;color: #9BFFFF;}
 
-.btn{font-size: 20px;border-radius: 12px;transition-duration: 0.4s;background-color: #e43f5a;font-weight:bold;cursor: pointer;font-family: 'Playfair Display SC', serif;}
-.btn:hover{background-color: #e43f5a;color: white;}
+.btn{padding:15px 15px;font-size: 20px;border-radius: 40px; transition-duration: 0.4s;font-weight:bold;cursor: pointer;font-family: 'Playfair Display SC', serif;}
+.btn:hover{color: white;}
 
         
-@media (max-width: 950px){
-    .header h1{font-size: 25px;}
+@media (max-width: 850px){
+    .header h1{font-size: 20px;}
     .header h2{font-size: 15px;}
-    .TeamInfo{font-size: 10px;}
+    .TeamInfo{font-size: 15px;}
     .btn{font-size: 8px;}
 }
-                     
+       
+
+@media (min-width: 1920px){
+    .header h1{font-size: 100px;}
+    .header h2{font-size: 50px;}
+    .TeamInfo{font-size: 25px;}
+    .btn{font-size: 10px;}
+}
