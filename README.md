@@ -1,4 +1,5 @@
 # team-1-space-explorer
+https://space-explorer-mission.netlify.app/
 ## Project Rubics
 | Requirement | Description |
 | --- | --- |
