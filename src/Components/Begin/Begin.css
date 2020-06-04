@@ -4,11 +4,7 @@
 body{width: 100%;height:100%;background-image: url('../Images/milky-way.png') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat; color: white;}
 
 .Begin {font-family: 'Monoton', cursive; background-image: url('../Images/rocket.png') ;background-attachment:fixed; background-size: 230px; background-position-x: 85%; background-position-y: 50%; background-repeat: no-repeat;height: 100vh;}
-.Begin img{animation: blink 2s ease-in infinite;}
-@keyframes blink {
-    0%,100%{opacity: 0;}
-    50%{opacity: 1;}
-}
+
 
 .header h1{font-size: 50px;margin-left: 40px;color: #f0a500;}
 .header h2{font-size: 35px;margin-left: 50px;color: #f0a500;}
