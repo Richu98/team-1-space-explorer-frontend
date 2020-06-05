@@ -27,7 +27,7 @@ class Destination extends Component{
         image.append(this.state.pictures,this.state.pictures.name);
         axios.post('https://meetgreet-upload.herokuapp.com/upload',image).then(res =>{
             console.log(res);
-        })
+        });
     }
 
 
