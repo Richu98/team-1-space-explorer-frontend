@@ -12,7 +12,7 @@ class Begin extends Component {
     teamName: "",
     destination: "",
     members: [],
-    spaceShipName: "",
+    spaceshipName: "",
     mission: ""
   }
 
@@ -29,7 +29,7 @@ class Begin extends Component {
         teamName: this.state.teamName,
         destination: this.state.destination,
         members: this.state.members,
-        spaceShipName: this.state.spaceShipName,
+        spaceshipName: this.state.spaceshipName,
         mission: this.state.mission
       }
 
