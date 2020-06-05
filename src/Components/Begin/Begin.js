@@ -98,7 +98,7 @@ class Begin extends Component {
             
             <div>
               <label htmlFor="spaceShipName">Spaceship Name:</label>
-                <input type="text" id="spaceShipName" placeholder="Enter SpaceShip Name" onChange={this.handlechange} required />
+                <input type="text" id="spaceshipName" placeholder="Enter SpaceShip Name" onChange={this.handlechange} required />
             </div>
 
               <div>
