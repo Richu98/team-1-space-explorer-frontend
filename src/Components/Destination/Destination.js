@@ -46,11 +46,11 @@ class Destination extends Component{
             <div className="Destination">
                 <div className="imageContainer">
                     <input type="file" onChange = {this.handleImageSelection}/>
-                    <button onClick = {this.handleImageUpload}> Upload </button>
+                    <button className="upload" onClick = {this.handleImageUpload}> Upload </button>
 
                                 {/*-------------FOOTER------------- */}
 
-                        <button className="butclass" onClick={this.handleClick}>It's Time To Go Home!! :( </button>        
+                        <button className="butClass" onClick={this.handleClick}>It's Time To Go Home!! </button>        
 
 
                 </div>

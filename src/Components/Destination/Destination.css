@@ -3,7 +3,7 @@
 *{padding: 0%; margin: 0%;box-sizing: border-box;}
 
 
-.Destination{height:100vh;width:100%;background-image: url('../Images/planet.jpg') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat; }
+.Destination{height:100vh;width:100%;background-image: url('../Images/planet.jpg') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat;}
 
 .imageContainer{background-image: url('../Images/rocket.png') ;background-attachment:fixed; background-size: 230px; background-position-x: 85%; background-position-y: 50%; background-repeat: no-repeat; animation: blink 4s linear infinite;height: 100%;}
 
@@ -14,8 +14,12 @@
 
 }
 
+.upload{cursor: pointer;}
 
 
+.butClass{transition: 3s;position: absolute;margin-left: 50vh;margin-top: 80vh;font-size: 30px;color: crimson;border-radius: 20px;background-color: darkturquoise;cursor: pointer;}
+
+.butClass:hover{background-color: gold;color: indigo;}
 
 @media (min-width: 1920px){
     .Destination{
