@@ -118,7 +118,7 @@ class Begin extends Component {
                     this.state.members.map((data, index) => {
                       return (
                         <div className="teammem" key={index}>
-                            <p>{data.name}</p>
+                            <p>{data}</p>
                         </div>
                       );
                     })
