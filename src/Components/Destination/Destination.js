@@ -11,7 +11,7 @@ class Destination extends Component{
     
 
     state = {
-        pictures: "",
+        pictures: "";
     }
     }
     
