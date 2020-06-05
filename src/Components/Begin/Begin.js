@@ -11,7 +11,7 @@ class Begin extends Component {
   state = {
     teamName: "",
     destination: "",
-    members: [""],
+    members: [],
     spaceshipName: "",
     mission: ""
   }
@@ -97,7 +97,7 @@ class Begin extends Component {
             </div>
             
             <div>
-              <label htmlFor="spaceShipName">Spaceship Name:</label>
+              <label htmlFor="spaceshipName">Spaceship Name:</label>
                 <input type="text" id="spaceshipName" placeholder="Enter SpaceShip Name" onChange={this.handlechange} required />
             </div>
 

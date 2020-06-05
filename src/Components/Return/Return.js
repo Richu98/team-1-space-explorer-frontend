@@ -6,8 +6,8 @@ class Result extends Component{
     render(){
 
         return(
-            <div className="Result">
-               
+            <div className="Return">
+              <h1>hello world</h1> 
             </div>
         );
     }

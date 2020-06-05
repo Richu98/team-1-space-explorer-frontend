@@ -32,6 +32,14 @@ class Destination extends Component{
     }
 
 
+
+    handleClick = (e) => {
+        this.props.history.push("/Return");
+    }
+
+    
+    
+    
     render(){
         console.log(this.state.pictures);
         return(
@@ -39,6 +47,12 @@ class Destination extends Component{
                 <div className="imageContainer">
                     <input type="file" onChange = {this.handleImageSelection}/>
                     <button onClick = {this.handleImageUpload}> Upload </button>
+
+                                {/*-------------FOOTER------------- */}
+
+                        <button className="butclass" onClick={this.handleClick}>It's Time To Go Home!! :( </button>        
+
+
                 </div>
             </div>
         );
