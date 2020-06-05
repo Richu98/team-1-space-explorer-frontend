@@ -9,11 +9,11 @@ class Destination extends Component{
     componentDidMount(){
         swal("Your Destination Has Arrived", "Click OK to Make some Memories");
     
-    }
+    
     state = {
         pictures: ""
     }
-    
+    }
     
 
     handleImageSelection = (e) =>{
