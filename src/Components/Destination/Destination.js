@@ -7,7 +7,7 @@ import './Destination.css';
 class Destination extends Component{
 
     componentDidMount(){
-        swal("Here's the title!", "...and here's the text!");
+        swal("Your Destination Has Arrived", "Click OK to Make some Memories");
     }
 
     state = {
