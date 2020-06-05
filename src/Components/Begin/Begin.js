@@ -28,7 +28,7 @@ class Begin extends Component {
       const astronauts = { 
         teamName: this.state.teamName,
         destination: this.state.destination,
-        members: this.state.members,
+        teamMembers: this.state.members,
         spaceshipName: this.state.spaceshipName,
         mission: this.state.mission
       }
@@ -58,7 +58,7 @@ class Begin extends Component {
     e.preventDefault();
     const members = this.state.members;
     const forArray = this.state.forArray;
-    members.push({ name: forArray });
+    members.push(forArray);
     this.setState({ members: members, forArray: "" });
 
 
