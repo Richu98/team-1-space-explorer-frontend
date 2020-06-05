@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import swal from 'sweetalert'
+import swal from 'sweetalert';
 import './Destination.css';
 
 
@@ -11,7 +11,7 @@ class Destination extends Component{
     }
 
     state = {
-        pictures: ""
+        pictures: "";
     }
 
     handleImageSelection = (e) =>{
