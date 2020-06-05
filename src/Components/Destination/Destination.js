@@ -22,8 +22,11 @@ class Destination extends Component{
     handleImageUpload = (e) => {
 
         const image = new FormData();
+        const config = {
+            headers: { 'content-type': 'multipart/form-data' }
+        };
         image.append('file',this.state.pictures,this.state.pictures.name);
-        axios.post('https://meetgreet-upload.herokuapp.com/upload',image).then(res =>{
+        axios.post('https://meetgreet-upload.herokuapp.com/upload',image,config).then(res =>{
             console.log(res);
         })
     }

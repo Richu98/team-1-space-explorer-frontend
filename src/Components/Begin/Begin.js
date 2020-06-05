@@ -11,7 +11,7 @@ class Begin extends Component {
   state = {
     teamName: "",
     destination: "",
-    teamMembers: [""],
+    members: [""],
     spaceshipName: "",
     mission: ""
   }
@@ -19,7 +19,7 @@ class Begin extends Component {
   handlechange = (e) => {
     this.setState({
       [e.target.id]: e.target.value 
-    })
+    });
   }
 
   handleSubmit = (e) => {
@@ -28,7 +28,7 @@ class Begin extends Component {
       const astronauts = { 
         teamName: this.state.teamName,
         destination: this.state.destination,
-        teamMembers: this.state.teamMembers,
+        teamMembers: this.state.members,
         spaceshipName: this.state.spaceshipName,
         mission: this.state.mission
       }
@@ -56,10 +56,10 @@ class Begin extends Component {
 
   addPeople = (e) => {
     e.preventDefault();
-    const teamMembers = this.state.teamMembers;
+    const members = this.state.members;
     const forArray = this.state.forArray;
-    teamMembers.push(forArray);
-    this.setState({ teamMembers: teamMembers });
+    members.push(forArray);
+    this.setState({ members: members, forArray: "" });
 
 
 
@@ -107,18 +107,18 @@ class Begin extends Component {
               </div>
 
               <div>
-                <label htmlFor="teamMembers"> Members List:</label>
-                  <input type="text" id="teamMembers" placeholder="Member Name" onChange={this.handleChangeArray} required />
+                <label htmlFor="members"> Members List:</label>
+                  <input type="text" id="members" placeholder="Member Name" onChange={this.handleChangeArray} required />
 
                   {/*-------button for add members to array*/}
                    <button className="btn_add" onClick={this.addPeople}>Add The Member</button> 
 
                     {/*----Rendering Member Data------ */}
                   {
-                    this.state.teamMembers.map((data, index) => {
+                    this.state.members.map((data, index) => {
                       return (
                         <div className="teammem" key={index}>
-                            <p>{data}</p>
+                            <p>{data.name}</p>
                         </div>
                       );
                     })
