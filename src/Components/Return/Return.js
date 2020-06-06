@@ -16,7 +16,8 @@ class Result extends Component{
 
         axios.get('http://api-space-explorer.herokuapp.com/api/astronauts/?id='+id).then(res =>{
                 this.setState({
-                    destination: res.data[0].teamName
+                    name: res.data[0].teamName,
+                    place :res.data[0].destination
                 })
             })
 
@@ -30,7 +31,9 @@ class Result extends Component{
 
         return(
             <div className="Return">
-              <h1>Welcome Back to Earth {this.state.destination}</h1><br/>
+              <h1>Welcome Back to Earth {this.state.name}</h1>
+
+              <h2>Hope You Had Fun Going To {this.state.place}</h2>
 
                                 
             </div>

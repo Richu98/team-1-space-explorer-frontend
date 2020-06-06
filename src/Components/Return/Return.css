@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
 *{padding: 0%; margin: 0%;box-sizing: border-box;}
 
-.Return{font-family: 'Playfair Display SC', serif;height:100vh;width:100%;background-image: url('../Images/earth.jpg');background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat;color: black;display: flex;}
+.Return{font-family: 'Playfair Display SC', serif;height:100vh;width:100%;background-image: url('../Images/earth.jpg');background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat;color: black;}
 
-.Return h1{background-color: rgba(0, 0, 0, 0.3);font-size: 80px;color:#ff4d00 ; font-weight: bolder;margin: auto;}
+.Return h1{background-color: rgba(0, 0, 0, 0.3);font-size: 80px;color:#ff4d00 ; font-weight: bolder;}
+
+.Return h2{background-color: rgba(0, 0, 0, 0.3);font-size: 60px;color:#ff4d00 ; font-weight: bolder;}
