@@ -10,14 +10,13 @@
 @keyframes blink {
     100% {background-position-y:80%}
     0% {background-position-y:10% }
-
-
 }
 
 .upload{cursor: pointer;}
 
+.imgShow { display: flex; justify-content:space-around;flex-direction: row;flex-wrap: wrap;}
 
-.butClass{transition: 3s;position: absolute;margin-left: 50vh;margin-top: 80vh;font-size: 30px;color: crimson;border-radius: 20px;background-color: darkturquoise;cursor: pointer;}
+.butClass{transition: 3s;position: absolute;margin-left: 50vh;padding: 3px 3px; font-size: 30px;color: crimson;border-radius: 20px;background-color: darkturquoise;cursor: pointer;}
 
 .butClass:hover{background-color: gold;color: indigo;}
 

@@ -43,7 +43,7 @@ class Destination extends Component{
         const pictures = this.state.pictures;
         pictures.push(this.state.imgData);
 
-        this.setState({pictures: pictures})
+        this.setState({ pictures: pictures })
         
         /*---------------------------------- */
         console.log(this.state);
@@ -57,13 +57,15 @@ class Destination extends Component{
     handleClick = (e) => {
         console.log(this.state);
         
-        axios.post('https://api-space-explorer.herokuapp.com/api/astronauts',this.state.pictures)
-        .then(res =>{
-            console.log(res);
-        })
-        .catch(err =>{
-            console.log(err);
-        })
+            axios.post('https://api-space-explorer.herokuapp.com/api/astronauts',this.state.pictures)
+            .then(res =>{
+                console.log(res);
+            })
+            .catch(err =>{
+                console.log(err);
+            })  
+
+
         this.props.history.push("/Return");
         
     }
@@ -81,13 +83,13 @@ class Destination extends Component{
                     
                     <input type="file" onChange = {this.handleImageSelection}/>
                     <button className="upload" onClick = {this.handleImageUpload}> Upload </button>
-                    <div>
+                    <div className="imgShow">
                         {
                             this.state.pictures.map((data,index) =>{
                                 const imgGetUrl = this.state.imgUrl + data;
                                 return(
-                                    <div key={index}>
-                                        <img src={imgGetUrl} alt="hello" />
+                                    <div  key={index}>
+                                        <img src={imgGetUrl} width="300px" height="300px"alt="hello" />
                                     </div>
                                 );
                             })
@@ -96,7 +98,7 @@ class Destination extends Component{
 
                     {/*-------------FOOTER------------- */}
 
-                        <button className="butClass" onClick={this.handleClick}>It's Time To Go Home!! :( </button>        
+                        <button className="butClass" onClick={this.handleClick}>It's Time To Go Home!! </button>        
 
 
                 </div>
