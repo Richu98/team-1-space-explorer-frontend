@@ -4,18 +4,21 @@ import axios from 'axios';
 
 class Result extends Component{
 
-    state= {
-        id:"",
+    state ={
+        id: ""
     }
 
     componentDidMount(){
 
-            const id = localStorage.getItem("id")||null
-            this.setState({id:id});
-                console.log(this.state);
+            
+        const id = localStorage.getItem('id');
+        this.setState({id: id});
 
-        axios.get('http://api-space-explorer.herokuapp.com/api/astronauts/').then(res =>{
-            console.log(res.data);
+        axios.get('http://api-space-explorer.herokuapp.com/api/astronauts/?id='+id).then(res =>{
+            this.setState({
+                destination: res.data.destination,
+
+            })
         })
     }
 
@@ -25,7 +28,8 @@ class Result extends Component{
 
         return(
             <div className="Return">
-              <h1>hello world</h1> 
+              <h1>Welcome Back to Earth</h1> 
+                
             </div>
         );
     }

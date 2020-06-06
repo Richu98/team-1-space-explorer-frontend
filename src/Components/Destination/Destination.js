@@ -8,6 +8,7 @@ class Destination extends Component{
 
     componentDidMount(){
         swal("Your Destination Has Arrived", "Click OK to Make some Memories");
+        
     }
 
     state = {
@@ -24,31 +25,31 @@ class Destination extends Component{
 
         /*----------for uploading an image--------- */
 
+        console.log(this.state.imgAdd);
         const image = new FormData();
         const config = {
             headers: { 'content-type': 'multipart/form-data' } };
-        console.log(this.state.imgAdd);    
+            
         image.append('file',this.state.imgAdd,this.state.imgAdd.name);
         axios.post('https://meetgreet-upload.herokuapp.com/upload',image,config).then(res =>{
+            
             this.setState({
-                imgData: res.data,
-            })
+                imgData: res.data
+            })            
+            console.log(res.data)
         })
         .catch(err =>{
             console.log(err);
         })
         /*-------To add imgData in into array */
-
-
+        console.log(this.state.imgData)
         const pictures = this.state.pictures;
         pictures.push(this.state.imgData);
-
         this.setState({ pictures: pictures })
         
-        /*---------------------------------- */
-        console.log(this.state);
-        
-        console.log(this.state.pictures);
+        /*----------------------------------------- */
+       // console.log(this.state.imgData);
+       // console.log(this.state.pictures);
 
     }
 
@@ -56,7 +57,8 @@ class Destination extends Component{
 
     handleClick = (e) => {
         console.log(this.state);
-        
+
+            console.log(this.state.pictures);
             axios.post('https://api-space-explorer.herokuapp.com/api/astronauts',this.state.pictures)
             .then(res =>{
                 console.log(res);
