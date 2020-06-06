@@ -9,6 +9,7 @@ import './Begin.css';
 class Begin extends Component {
 
   state = {
+
     teamName: "",
     destination: "",
     members: [],
@@ -38,6 +39,12 @@ class Begin extends Component {
     axios.post('https://api-space-explorer.herokuapp.com/api/astronauts', astronauts)
     .then(res =>{
       console.log(res);
+      console.log(res.data._id);
+      
+      localStorage.setItem('id',res.data._id);
+      
+    
+        
     })
    
     this.props.history.push("/Destination");
