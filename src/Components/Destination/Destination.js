@@ -32,17 +32,17 @@ class Destination extends Component{
         axios.post('https://meetgreet-upload.herokuapp.com/upload',image,config).then(res =>{
             this.setState({
                 imgData: res.data,
-                imgGetUrl: this.state.imgUrl + res.data
             })
         })
-        .catch(res =>{
-            console.log(res);
+        .catch(err =>{
+            console.log(err);
         })
         /*-------To add imgData in into array */
 
 
         const pictures = this.state.pictures;
         pictures.push(this.state.imgData);
+
         this.setState({pictures: pictures})
         
         /*---------------------------------- */
@@ -56,6 +56,14 @@ class Destination extends Component{
 
     handleClick = (e) => {
         console.log(this.state);
+        
+        axios.post('https://api-space-explorer.herokuapp.com/api/astronauts',this.state.pictures)
+        .then(res =>{
+            console.log(res);
+        })
+        .catch(err =>{
+            console.log(err);
+        })
         this.props.history.push("/Return");
         
     }
@@ -67,12 +75,23 @@ class Destination extends Component{
         
         return(
             <div className="Destination">
+                <h2>Lets Make some memories...</h2>
+
                 <div className="imageContainer">
+                    
                     <input type="file" onChange = {this.handleImageSelection}/>
                     <button className="upload" onClick = {this.handleImageUpload}> Upload </button>
                     <div>
-                        
-                        
+                        {
+                            this.state.pictures.map((data,index) =>{
+                                const imgGetUrl = this.state.imgUrl + data;
+                                return(
+                                    <div key={index}>
+                                        <img src={imgGetUrl} alt="hello" />
+                                    </div>
+                                );
+                            })
+                        }
                     </div>
 
                     {/*-------------FOOTER------------- */}
