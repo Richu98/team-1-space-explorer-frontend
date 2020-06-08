@@ -13,23 +13,29 @@ class Result extends Component{
             
         const id = localStorage.getItem('id');
         this.setState({id: id});
-
+        console.log(this.state.id);
         axios.get('http://api-space-explorer.herokuapp.com/api/astronauts/?id='+id).then(res =>{
             this.setState({
-                destination: res.data.destination,
-
+                
+                place :res.data[0].destination
             })
+            console.log(res.data[0]);
         })
+        
+        
     }
-
+    
 
 
     render(){
 
         return(
             <div className="Return">
-              <h1>Welcome Back to Earth</h1> 
-                
+               
+          <div>
+               <h1>Welcome Back to Earth</h1> 
+               <h2>How is your journey on {this.state.place}</h2>
+            </div>
             </div>
         );
     }

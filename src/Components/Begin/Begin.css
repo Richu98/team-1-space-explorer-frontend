@@ -29,6 +29,13 @@ input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;bo
 .btn{margin-top: 10px;padding: 15px 15px;font-size: 20px;border-radius: 40px; transition-duration: 0.4s;font-weight:bold;cursor: pointer;font-family: 'Playfair Display SC', serif;background-color: green;color: black;box-shadow: #393e46 3px 3px;outline: none;}
 .btn:hover{color: white;}
 
+.tError, .dError,.mError, .sError, .membersError{
+    color: red;
+    padding-left: 70px;
+    font-size: 20px;
+
+}  
+
         
 @media (max-width: 850px){
     .header h1{font-size: 150%;}
