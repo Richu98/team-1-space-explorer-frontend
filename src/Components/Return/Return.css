@@ -4,5 +4,9 @@
 .Return{height:100vh;width:100%;background-image: url('../Images/earth.jpg');background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat;color: black;}
 
 .Return h1{
-    font-size: 300px;
+    font-size: 70px; color: #ff5200;
+}
+
+.Return h2{
+    font-size: 50px; color: #f9ff21;
 }

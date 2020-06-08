@@ -182,14 +182,17 @@ class Begin extends Component {
                 <label htmlFor="members"> Members List:</label>
                   <input type="text" id="members" placeholder="Member Name" onChange={this.handleChangeArray}  />
 
+
+                   {/*-------button for add members to array*/}
+                   <button className="btn_add" onClick={this.addPeople}>Add The Member</button> 
+
                     {/*-------------------show Eror if any-------------------- */}
                     <div className="membersError"> {this.state.membersError}</div>
                   
 
 
 
-                  {/*-------button for add members to array*/}
-                   <button className="btn_add" onClick={this.addPeople}>Add The Member</button> 
+                 
 
                     {/*----Rendering Member Data------ */}
                   {
