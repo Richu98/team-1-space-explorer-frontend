@@ -34,23 +34,25 @@ class Begin extends Component {
     let membersError= "";
     let spaceshipNameError= "";
     let missionError= "";
-    
+            //-------this validation is for team name--------
       if(!this.state.teamName) {
         teamNameError= "Team Name cannot be empty";
-        
       }
+            //--------this validation is for destination------
       if(!this.state.destination) {
-        destinationError= "Team Name cannot be empty";
+        destinationError= "Destination Name cannot be empty";
       }
             //---------this validation if for members ---------
       if(!this.state.forArray) {
-        membersError= "Team Name cannot be empty";
+        membersError= "Member's Name cannot be empty";
       }
+           //--------this validation is for spaceshipname------
       if(!this.state.spaceshipName) {
-        spaceshipNameError= "Team Name cannot be empty";
+        spaceshipNameError= "Spaceship Name cannot be empty";
       }
+          //--------this validation is for mission name------
       if(!this.state.mission) {
-        missionError= "Team Name cannot be empty";
+        missionError= "Mission Name cannot be empty";
       }
       if(teamNameError || destinationError || membersError || spaceshipNameError || missionError ) {
         this.setState({ 
