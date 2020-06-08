@@ -13,3 +13,5 @@ https://space-explorer-mission.netlify.app/
 2. On the second screen, the team should be welcomed by a modal and once the modal disappears, User can upload some pictures on the database and from the database, those pictures should be visible back to the second screen...
 3. Moving on to the last screen, the team will be back to earth with a message written on the screen (Welcome Back to Earth. Hope you made some memories on [destination place]). Making the UI of the last screen enjoyable is all up to you. You can even use images as a collage at the last screen along with the message.
 
+## Team Members : Anikate, Vanshika, Chris, Shivangi and Pankaj
+
