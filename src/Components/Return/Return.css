@@ -1,12 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
-*{padding: 0%; margin: 0%;box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:wght@500&display=swap');
+*{padding: 0%; margin: 0%;box-sizing: border-box;font-family: 'Gelasio', serif;}
 
-.Return{height:100vh;width:100%;background-image: url('../Images/earth.jpg');background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat;color: black;}
+.Return{height:100vh;width:100%;background-image: url('../Images/earth.jpg');background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat;color: black;display: flex wrap;overflow: hidden;}
 
-.Return h1{
-    font-size: 70px; color: #ff5200;
+
+.text{background-color: rgba(0, 0, 0, 0.5);width: fit-content;margin: auto;}
+
+.text h1{
+    font-size: 50px;color: #ffe75e;margin:0px 60px;
 }
 
-.Return h2{
-    font-size: 50px; color: #f9ff21;
+.text h2{
+    font-size: 37px;color: #81f5ff;margin:0px 140px;
 }
+
+
+@media (max-width: 950px){
+
+.text h1{font-size:40px;margin:0px 30px;}
+.text h2{font-size:30px;margin:0px 70px;}
+
+}
+
+@media (max-width: 650px){
+
+    .text h1{font-size:25px;margin:0px 15px;}
+    .text h2{font-size:15px;margin:0px 75px;}
+    
+    }
