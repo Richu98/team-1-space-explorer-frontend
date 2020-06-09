@@ -25,7 +25,6 @@ class Destination extends Component{
 
         /*----------for uploading an image--------- */
 
-        console.log(this.state.imgAdd);
         const image = new FormData();
         const config = {
             headers: { 'content-type': 'multipart/form-data' } };
@@ -33,27 +32,19 @@ class Destination extends Component{
         image.append('file',this.state.imgAdd,this.state.imgAdd.name);
         axios.post('https://meetgreet-upload.herokuapp.com/upload',image,config).then(res =>{
             
-            this.setState({
-                imgData: res.data
-            })            
-            console.log(res.data)
+            this.setState({ imgData: res.data })            
+                console.log(res.data)
+            /*-------To add imgData in into array */
+                const pictures = this.state.pictures;
+                pictures.push(this.state.imgData);
+                this.setState({ pictures: pictures })
+                console.log(this.state.pictures); 
         })
         .catch(err =>{
             console.log(err);
         })
-        /*-------To add imgData in into array */
-        console.log(this.state.imgData)
-        const pictures = this.state.pictures;
-        pictures.push(this.state.imgData);
-        this.setState({ pictures: pictures })
-        
-        /*----------------------------------------- */
-       // console.log(this.state.imgData);
-       // console.log(this.state.pictures);
 
     }
-
-
 
     handleClick = (e) => {
         console.log(this.state);
@@ -66,7 +57,6 @@ class Destination extends Component{
             .catch(err =>{
                 console.log(err);
             })  
-
 
         this.props.history.push("/Return");
         
@@ -87,6 +77,7 @@ class Destination extends Component{
                     <button className="upload" onClick = {this.handleImageUpload}> Upload </button>
                     <div className="imgShow">
                         {
+                /*----------Rendering Image Data-------- */
                             this.state.pictures.map((data,index) =>{
                                 const imgGetUrl = this.state.imgUrl + data;
                                 return(
