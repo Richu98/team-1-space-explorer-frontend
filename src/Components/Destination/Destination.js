@@ -10,12 +10,15 @@ class Destination extends Component{
         swal("Your Destination Has Arrived", "Click OK to Make some Memories");
         const id = localStorage.getItem('id');
         this.setState({id: id});
+
         
     }
 
     state = {
+
         imgUrl:'https://meetgreet-upload.herokuapp.com/images/',
         id: "",
+
         pictures: []
     }
 
@@ -41,7 +44,6 @@ class Destination extends Component{
                 const pictures = this.state.pictures;
                 pictures.push(this.state.imgData);
                 this.setState({ pictures: pictures })
-                 
         })
         .catch(err =>{
             console.log(err);
@@ -53,6 +55,7 @@ class Destination extends Component{
         const pictures=  this.state.pictures;
             console.log(pictures);
             axios.put('https://api-space-explorer.herokuapp.com/api/astronauts/'+this.state.id, pictures)
+
             .then(res =>{
                 console.log(res);
             })
@@ -80,13 +83,16 @@ class Destination extends Component{
 
                     <div className="imgShow">
 
+
                         {
                 /*----------Rendering Image Data-------- */
                             this.state.pictures.map((data,index) =>{
                                 const imgGetUrl = this.state.imgUrl + data;
                                 return(
+
                                     <div className="imageBox" key={index}>
                                         <img src={imgGetUrl} alt="hello" className="imgDisplay"/>
+
                                     </div>
                                 );
                             })
@@ -98,6 +104,7 @@ class Destination extends Component{
 
                         <button className="butClass" onClick={this.handleClick}>It's Time To Go Home!! </button>        
                     </div>
+
 
                 </div>
             </div>
