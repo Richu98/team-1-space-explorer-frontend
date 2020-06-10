@@ -1,43 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Playfair+Display+SC:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
 *{padding: 0%; margin: 0%;box-sizing: border-box;}
+body{width:100%;height: 100%;;background-image: url('../Images/milky-way.png') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat; color: white;}
 
-.Begin {font-family: 'Dancing Script', cursive;
-        width: 100%; height: 100vh;  background-image: url('./milky-way.png');
-        background-attachment: fixed; background-size: cover; 
-        background-position: center; background-repeat: no-repeat; color: white;display: flex;
-        
-}
+.Begin {font-family: 'Monoton', cursive; background-image: url('../Images/rocket.png') ;background-attachment:fixed; background-size: 230px; background-position-x: 85%; background-position-y: 50%; background-repeat: no-repeat; animation: rocket 4s linear infinite;height: 100vh;}
 
-        .Begin .header{width: 40%;height: 20%;}
-        .Begin .header h1{font-size: 70px; margin-left: 50px;}
-        .Begin .header h2{font-size: 35px;margin-left: 85px;} 
-   
+@keyframes rocket {0% {background-position-y:80%}
+    100% {background-position-y:10% }
 
-        
-.TeamInfo{display: flex;
-        font-family: 'Architects Daughter', cursive;
-        margin-top: 150px ;  
-        padding-left: 40px;
-        position: absolute; 
-        left: 40%;
-        height: 70vh;
-        width: 400px;
-        font-size: 35px;  
-        font-weight: bolder;
-        background-color:rgba(0, 0,0,0.4);
+
 }
 
 
+.header h1{font-size: 50px;margin-left: 40px;color: #f0a500;}
+.header h2{font-size: 35px;margin-left: 50px;color: #f0a500;}
+           
+.TeamInfo{font-family: 'Playfair Display SC', serif;font-size:xx-large;font-weight:bolder;padding: 90px 90px;color:#81f5ff ;display: flex;justify-content:flex-start;}
 
-.btn{font-size: 22px;border-radius: 12px;transition-duration: 0.4s;background-color: #f44336;
-        font-weight:bold;cursor: pointer;margin-top: 40px;}
-.btn:hover{background-color: rgba(0, 0,0,0.4);color: white;}
+input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;box-shadow:  4px 3px;font-family: 'Playfair Display SC', serif;font-size: large;}
 
 
+.btn_add{padding:5px 5px;;border-radius: 15px;background-color: #01d28e;color: black;font-weight: bolder;cursor: pointer;font-family: 'Playfair Display SC', serif;box-shadow: #393e46 3px 3px;outline: none;}
+.btn_add:hover{background-color: black;color: #52de97;}
+
+
+.teammem{font-size: 50%;color: #ffffdd;margin-left: 5%;margin-top:10px;}
+
+.btn{margin-top: 10px;padding: 15px 15px;font-size: 20px;border-radius: 40px; transition-duration: 0.4s;font-weight:bold;cursor: pointer;font-family: 'Playfair Display SC', serif;background-color: green;color: black;box-shadow: #393e46 3px 3px;outline: none;}
+.btn:hover{color: white;}
+
+.tError, .dError,.mError, .sError, .membersError{
+    color: red;
+    padding-left: 70px;
+    font-size: 20px;
+
+}  
 
         
-        
-        
-    
-                     
+@media (max-width: 850px){
+    .header h1{font-size: 150%;}
+    .header h2{font-size: 15px;}
+    .TeamInfo{font-size: 120%;padding: 20px 20px;}
+    .btn{font-size: 90%;}
+    .btn_add{font-size: 50%;}
+    input[type="text"]{font-size: small;}
+    .Begin{background-size: 13%; background-position-x: 95%; background-position-y: 30%; background-repeat: no-repeat;}
+
+}
+       
+
+@media (min-width: 1920px){
+    .header h1{font-size: 150px;}
+    .header h2{font-size: 60px;}
+    .TeamInfo{font-size: 55px;}
+    .btn{font-size: 30%;}
+    .btn_add{font-size: 50%;}
+    .Begin{
+        animation: rocket 5s linear infinite;
+    }
+    @keyframes rocket {0% {background-position-y:50%} 100% {background-position-y:10% } }
+}
+
+
+
