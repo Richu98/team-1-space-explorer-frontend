@@ -11,5 +11,5 @@ code {
 .btn-first1:hover{background-image: linear-gradient(to bottom right,#9600FF,#AEBAF8);}
 
 
-button{padding: 20px 20px; box-shadow: 9px 6px 18px rgba(0, 0, 0, 1);cursor: pointer;border-radius: 40px;background-image: linear-gradient(to bottom right, #00B4DB,#0083B0);transition: 3s;font-weight: bold;color: black;border: none;}
+button{padding: 20px 20px; box-shadow: 9px 6px 15px rgba(0, 0, 0, 1);cursor: pointer;border-radius: 40px;background-image: linear-gradient(to bottom right, #00B4DB,#0083B0);transition: 3s;font-weight: bold;color: black;border: none;}
 button:hover{background-image: linear-gradient(to bottom right,#00B4DB,#0083B0);}
