@@ -127,6 +127,7 @@ class Begin extends Component {
     return (
       <div className="Begin">
 
+      <div className="head">
         {/* -----HEADER----- */}
 
         <div className="header">
@@ -134,7 +135,7 @@ class Begin extends Component {
           <h1>Lost In Space....</h1>
           <h2>Let's get going... </h2>
 
-        </div>
+        </div><br/>
 
         {/* -----FORM----- */}
 
@@ -142,7 +143,7 @@ class Begin extends Component {
           <form className="teamForm" autoComplete="off" onSubmit={this.handleSubmit}>
 
 
-            <div>
+            <div className="tn">
               <label htmlFor="teamName">Team Name:</label>
                 <input type="text" id="teamName" placeholder="Enter Team Name" value={this.state.teamName} onChange={this.handlechange} required />
             </div>
@@ -150,7 +151,7 @@ class Begin extends Component {
             {/*-------------------show Eror if any-------------------- */}
             <div className="tError"> {this.state.teamNameError}</div>
             
-            <div>
+            <div className="des">
 
               <label htmlFor="destination">Destination:</label>
                 <input type="text" id="destination" placeholder="Enter your Destination" onChange={this.handlechange}  />
@@ -159,7 +160,7 @@ class Begin extends Component {
             {/*-------------------show Eror if any-------------------- */}
             <div className="dError"> {this.state.destinationError}</div>
            
-            <div>
+            <div className="ssn">
               <label htmlFor="spaceshipName">Spaceship Name:</label>
                 <input type="text" id="spaceshipName" placeholder="Enter SpaceShip Name" onChange={this.handlechange}  />
             </div>
@@ -169,7 +170,7 @@ class Begin extends Component {
            
              
 
-              <div>
+              <div className="mis">
                 <label htmlFor="mission">Mission:</label>
                   <input type="text" id="mission" placeholder="Enter Mission" onChange={this.handlechange} />
               </div>
@@ -178,13 +179,13 @@ class Begin extends Component {
               <div className="mError"> {this.state.missionError}</div>
               
  
-              <div>
+              <div className="mem">
                 <label htmlFor="members"> Members List:</label>
                   <input type="text" id="members" placeholder="Member Name" onChange={this.handleChangeArray}  />
 
 
                    {/*-------button for add members to array*/}
-                   <button className="btn_add" onClick={this.addPeople}>Add The Member</button> 
+                   <button onClick={this.addPeople}>Add The Member</button>
 
                     {/*-------------------show Eror if any-------------------- */}
                     <div className="membersError"> {this.state.membersError}</div>
@@ -204,13 +205,15 @@ class Begin extends Component {
                       );
                     })
                   }
-              </div>
+              </div><br/>
             
 
            
             {/*-------------Submit Button-----------------*/}
-            <button className="btn" onClick={this.handleSubmit} >Ready For Take off in 3...2...1...</button>
+            <button className="btn-first1" onClick={this.handleSubmit} >Ready For Take off in 3...2...1...</button>
           </form>
+
+        </div>
 
         </div>
            
