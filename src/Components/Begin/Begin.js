@@ -185,7 +185,7 @@ class Begin extends Component {
 
 
                    {/*-------button for add members to array*/}
-                   <button className="btn-first" onClick={this.addPeople}>Add The Member</button>
+                   <button onClick={this.addPeople}>Add The Member</button>
 
                     {/*-------------------show Eror if any-------------------- */}
                     <div className="membersError"> {this.state.membersError}</div>

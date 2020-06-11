@@ -14,7 +14,7 @@ body{width:100%;background-image: url('../Images/milky-way.jpg') ;background-att
 
 }
 
-.head{background-color: rgba(0, 0,0 , 0.3);height:100vh;}
+
 
 
 .header h1{font-size: 50px;margin-left: 40px;color: #f0a500;font-family: 'Monoton', cursive;text-shadow: rgba(240, 165, 0, 0.4) 4px 4px ;}
@@ -23,11 +23,11 @@ body{width:100%;background-image: url('../Images/milky-way.jpg') ;background-att
 .TeamInfo{font-family: 'Playfair Display SC', serif;font-size:xx-large;font-weight:bolder;padding:25px 90px ;color:#7efaff ;display: flex;justify-content:flex-start;text-shadow: rgba(129, 245, 255, 0.5) 2px 3px ;}
 
 
-input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;box-shadow:rgba(20, 30, 55, 0.6)  4px 4px ;font-family: 'Playfair Display SC', serif;font-size: large;}
+input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;box-shadow:rgba(20, 30, 55, 0.6)  4px 4px ;font-family: 'Playfair Display SC', serif;font-size: large;border-radius: 25px;border: none;}
 
 
 
-.teammem{font-size: 50%;color: #c2f0fc;margin-left: 5%;margin-top:10px;line-height: normal;}
+.teammem{font-size:20px;color: #c2f0fc;margin-left: 5%;margin-top:10px;line-height: normal;text-shadow: none;}
 
 .btn{margin-top: 10px;padding: 15px 15px;font-size: 20px;;}
 
@@ -49,7 +49,7 @@ input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;bo
     .btn-first1{font-size: 90%;}
     .btn-first{font-size: 50%;}
     input[type="text"]{font-size: small;}
-    .head{background-size: 13%; background-position-x: 95%; background-position-y: 30%; background-repeat: no-repeat;}
+    .Begin{background-size: 13%; background-position-x: 95%; background-position-y: 30%; background-repeat: no-repeat;}
 
 }
        
@@ -58,9 +58,9 @@ input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;bo
     .header h1{font-size: 150px;}
     .header h2{font-size: 60px;}
     .TeamInfo{font-size: 55px;}
-    .btn-first1{font-size: 30%;}
+    .btn-first1{font-size: 80%;}
     .btn-first{font-size: 50%;}
-    .head{
+    .Begin{
         animation: rocket 5s linear infinite;
     }
     @keyframes rocket {0% {background-position-y:50%} 100% {background-position-y:10% } }

@@ -7,12 +7,9 @@ code {
     monospace;
 }
 
-.btn-first{padding: 20px 20px; box-shadow: 6px 4px 18px #AEBAF8 ;cursor: pointer;border-radius: 40px;background-image: linear-gradient(to bottom right, #9600FF,#AEBAF8);transition: 3s;font-weight: bold;color: white;border: none;}
-.btn-first:hover{background-image: linear-gradient(to bottom right,#9600FF,#AEBAF8);}
-
-.btn-first1{padding: 20px 20px; box-shadow: 7px 5px 18px #AEBAF8 ;cursor: pointer;border-radius: 40px;background-image: linear-gradient(to bottom right, #9600FF,#AEBAF8);transition: 3s;font-weight: bold;color: white;border: none;font-size: 25px;}
+.btn-first1{padding: 20px 20px; box-shadow: 3px 3px 8px #9600FF ;cursor: pointer;border-radius: 40px;background-image: linear-gradient(to bottom right, #9600FF,#AEBAF8);transition: 3s;font-weight: bold;color: white;border: none;font-size: 25px;}
 .btn-first1:hover{background-image: linear-gradient(to bottom right,#9600FF,#AEBAF8);}
 
 
-button{padding: 20px 20px; box-shadow: 7px 5px 18px #0083B0 ;cursor: pointer;border-radius: 40px;background-image: linear-gradient(to bottom right, #9600FF,#0083B0);transition: 3s;font-weight: bold;color: white;border: none;}
+button{padding: 20px 20px; box-shadow: 9px 6px 18px rgba(0, 0, 0, 1);cursor: pointer;border-radius: 40px;background-image: linear-gradient(to bottom right, #00B4DB,#0083B0);transition: 3s;font-weight: bold;color: black;border: none;}
 button:hover{background-image: linear-gradient(to bottom right,#00B4DB,#0083B0);}
