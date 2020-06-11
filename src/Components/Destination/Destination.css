@@ -3,19 +3,20 @@
 *{padding: 0%; margin: 0%;box-sizing: border-box;}
 
 
-.Destination{height:100vh;width:100%;background-image: url('../Images/planet.jpg') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat;}
-
+.Destination{height:100vh;width:100%;background-image: url('../Images/start.jpg') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat;}
+.Destination h2 {font-family: 'Monoton', cursive;font-size: 50px;margin-left: 30px;color: #f0a500;padding: 20px;}
 
 .imageContainer{background-image: url('../Images/rocket.png') ;background-attachment:fixed; background-size: 230px; background-position-x: 85%; background-position-y: 50%; background-repeat: no-repeat; animation: blink 4s linear infinite;}
-
-
+#id { border:1px solid blue; margin-left: 40px;}
+ 
 @keyframes blink {
     100% {background-position-y:80%}
     0% {background-position-y:10% }
 }
 
 .upload{cursor: pointer;}
-
+.upload button {background-color: #2d3436;color:whitesmoke; padding: 10px 10px;box-shadow: #636e72 3px 3px; margin: 20px ;}
+.upload button:hover {color:black;}
 
 .imgShow { height: 70vh; width: 100%;margin-top: 1%; padding:20px 20px;display: flex; justify-content:space-around;align-content: flex-start; flex-direction: row; flex-wrap: wrap;}
 .imageBox {border-radius: 20px; overflow: hidden; box-shadow: 2px 2px 3px 3px darkgrey;}
@@ -27,15 +28,15 @@
 .butClass:hover{background-color: gold;color: indigo;}
 
 @media (min-width: 1920px){
-
     .imageContainer{
-
+          
         animation: blink 5s linear infinite;
     }
     @keyframes blink {100% {background-position-y:50%} 0% {background-position-y:10% } }
 }
 
 @media (max-width: 850px){
+    .Destination h2 {font-size: 20px}
 
     .imageContainer{background-size: 13%; background-position-x: 95%; background-position-y: 30%; background-repeat: no-repeat;}
 
