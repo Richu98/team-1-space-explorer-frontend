@@ -7,7 +7,7 @@ import './Destination.css';
 class Destination extends Component{
 
     componentDidMount(){
-        swal("Your Destination Has Arrived", "Click OK to Make some Memories");
+        swal ("Your Destination Has Arrived", "Click OK to Make some Memories");
         const id = localStorage.getItem('id');
         this.setState({id: id});
 
@@ -102,7 +102,7 @@ class Destination extends Component{
                     {/*-------------FOOTER------------- */}
                     <div>
 
-                        <button className="butClass" onClick={this.handleClick}>It's Time To Go Home!! </button>        
+                        <button className="btn-first1" onClick={this.handleClick}>It's Time To Go Home!! </button>        
                     </div>
 
 
