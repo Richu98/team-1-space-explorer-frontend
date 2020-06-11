@@ -14,6 +14,13 @@
     font-size: 37px;color: #81f5ff;margin:0px 140px;
 }
 
+.text h3{
+    font-size: 50px;color: aquamarine;margin:0px 70px;
+}
+
+.text h4{
+    font-size: 50px;color:#ffe75e;margin:0px 40px;
+}
 
 @media (max-width: 950px){
 

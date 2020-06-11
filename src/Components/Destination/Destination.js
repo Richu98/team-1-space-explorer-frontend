@@ -78,9 +78,10 @@ class Destination extends Component{
 
                 <div className="imageContainer">
                     
-                    <input type="file" onChange = {this.handleImageSelection}/>
-                    <button className="upload" onClick = {this.handleImageUpload}> Upload </button>
-
+                    <input type="file" id="buttonUpload" onChange = {this.handleImageSelection}/>
+                       <div className="upload" >
+                           <button className="button"  onClick = {this.handleImageUpload}> Upload </button>
+                         </div>
                     <div className="imgShow">
 
 
