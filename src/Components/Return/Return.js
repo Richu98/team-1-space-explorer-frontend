@@ -25,8 +25,6 @@ class Result extends Component {
                 spaceshipName: res.data[0].spaceshipName ,
                 pictures: res.data[0].pictures
             })
-            console.log(res.data);
-
         })
 
 

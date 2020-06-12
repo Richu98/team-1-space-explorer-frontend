@@ -57,23 +57,19 @@ class Destination extends Component{
         console.log(imgSend);
            /*--------update data pictures into database------------ */
             axios.put('https://api-space-explorer.herokuapp.com/api/astronauts/pictures/'+this.state.id, imgSend)
-
-
             .then(res =>{
-                console.log(res);
-                window.location.reload(res);
+                console.log("second-page",res);
+                this.props.history.push("/Return");
+                //window.location.reload(res);
             })
             .catch(err =>{
                 console.log(err);
             })  
 
-        this.props.history.push("/Return");
+        
         
     }
 
-    
-    
-    
     render(){
         
         return(
@@ -115,6 +111,5 @@ class Destination extends Component{
         );
     }
 }
-
 
 export default Destination;

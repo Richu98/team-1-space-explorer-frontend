@@ -88,8 +88,11 @@ class Begin extends Component {
 
           axios.post('https://api-space-explorer.herokuapp.com/api/astronauts', astronauts)
           .then(res =>{
-            console.log(res);
+            
             localStorage.setItem('id',res.data._id);  
+          })
+          .catch(err =>{
+            console.log(err);
           })
         
           this.props.history.push("/Destination");
@@ -185,9 +188,7 @@ class Begin extends Component {
 
 
                    {/*-------button for add members to array*/}
-
                    <button onClick={this.addPeople}>Add Member</button>
-
 
                     {/*-------------------show Eror if any-------------------- */}
                     <div className="membersError"> {this.state.membersError}</div>
@@ -212,17 +213,12 @@ class Begin extends Component {
 
            
             {/*-------------Submit Button-----------------*/}
-
             <button className="btn-first1" onClick={this.handleSubmit} >Ready To Take off</button>
-
           </form>
 
         </div>
 
         </div>
-           
-
-
       </div>
     );
   }
