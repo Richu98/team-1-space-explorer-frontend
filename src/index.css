@@ -7,9 +7,16 @@ code {
     monospace;
 }
 
-.btn-first1{padding: 20px 20px; box-shadow: 3px 3px 8px #9600FF ;cursor: pointer;border-radius: 40px;background-image: linear-gradient(to bottom right, #9600FF,#AEBAF8);transition: 3s;font-weight: bold;color: white;border: none;font-size: 25px;}
+.btn-first1{padding: 20px 20px; box-shadow: 3px 3px 8px #9600FF ;cursor: pointer;border-radius: 40px; outline:none;background-image: linear-gradient(to bottom right, #9600FF,#AEBAF8);transition: 3s;font-weight: bold;color: white;border: none;font-size: 30px;}
 .btn-first1:hover{background-image: linear-gradient(to bottom right,#9600FF,#AEBAF8);}
 
 
-button{padding: 20px 20px; box-shadow: 9px 6px 15px rgba(0, 0, 0, 1);cursor: pointer;border-radius: 40px;background-image: linear-gradient(to bottom right, #00B4DB,#0083B0);transition: 3s;font-weight: bold;color: black;border: none;}
+button{padding: 20px 20px; box-shadow: 9px 6px 15px rgba(0, 0, 0, 1);cursor: pointer;border-radius: 40px; outline:none; background-image: linear-gradient(to bottom right, #00B4DB,#0083B0);transition: 3s;font-weight: bold;color: black;border: none; font-size: 20px;}
 button:hover{background-image: linear-gradient(to bottom right,#00B4DB,#0083B0);}
+
+
+ @media (max-width: 850px){
+.btn-first1{padding: 10px 10px; font-size: 15px;}
+button{padding: 5px 5px;font-size: 16px;}
+
+ }

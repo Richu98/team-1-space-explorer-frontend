@@ -185,7 +185,9 @@ class Begin extends Component {
 
 
                    {/*-------button for add members to array*/}
-                   <button onClick={this.addPeople}>Add The Member</button>
+
+                   <button onClick={this.addPeople}>Add Member</button>
+
 
                     {/*-------------------show Eror if any-------------------- */}
                     <div className="membersError"> {this.state.membersError}</div>
@@ -210,7 +212,9 @@ class Begin extends Component {
 
            
             {/*-------------Submit Button-----------------*/}
-            <button className="btn-first1" onClick={this.handleSubmit} >Ready For Take off in 3...2...1...</button>
+
+            <button className="btn-first1" onClick={this.handleSubmit} >Ready To Take off</button>
+
           </form>
 
         </div>

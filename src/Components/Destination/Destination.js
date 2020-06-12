@@ -52,12 +52,16 @@ class Destination extends Component{
     }
 
     handleClick = (e) => {
-        const pictures=  this.state.pictures;
-            console.log(pictures);
-            axios.put('https://api-space-explorer.herokuapp.com/api/astronauts/'+this.state.id, pictures)
+
+        const imgSend=  { pictures: this.state.pictures};
+        console.log(imgSend);
+           /*--------update data pictures into database------------ */
+            axios.put('https://api-space-explorer.herokuapp.com/api/astronauts/'+this.state.id, imgSend)
+
 
             .then(res =>{
                 console.log(res);
+                window.location.reload(res);
             })
             .catch(err =>{
                 console.log(err);
@@ -74,16 +78,15 @@ class Destination extends Component{
         
         return(
             <div className="Destination">
-                <h2>Lets Make some memories...</h2>
 
                 <div className="imageContainer">
+
+                <h2>Lets Make some memories...</h2>
                     
                     <input type="file" onChange = {this.handleImageSelection}/>
                     <button className="upload" onClick = {this.handleImageUpload}> Upload </button>
 
                     <div className="imgShow">
-
-
                         {
                 /*----------Rendering Image Data-------- */
                             this.state.pictures.map((data,index) =>{
@@ -100,9 +103,10 @@ class Destination extends Component{
                     </div>
 
                     {/*-------------FOOTER------------- */}
-                    <div>
 
-                        <button className="btn-first1" onClick={this.handleClick}>It's Time To Go Home!! </button>        
+                    <div className="footer">
+                        <button className="btn-first1" onClick={this.handleClick}>It's Time To Go Home </button>        
+
                     </div>
 
 
