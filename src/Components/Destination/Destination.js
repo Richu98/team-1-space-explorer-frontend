@@ -7,15 +7,18 @@ import './Destination.css';
 class Destination extends Component{
 
     componentDidMount(){
-        swal("Your Destination Has Arrived", "Click OK to Make some Memories");
+        swal ("Your Destination Has Arrived", "Click OK to Make some Memories");
         const id = localStorage.getItem('id');
         this.setState({id: id});
+
         
     }
 
     state = {
+
         imgUrl:'https://meetgreet-upload.herokuapp.com/images/',
         id: "",
+
         pictures: []
     }
 
@@ -41,7 +44,6 @@ class Destination extends Component{
                 const pictures = this.state.pictures;
                 pictures.push(this.state.imgData);
                 this.setState({ pictures: pictures })
-                 
         })
         .catch(err =>{
             console.log(err);
@@ -50,11 +52,14 @@ class Destination extends Component{
     }
 
     handleClick = (e) => {
-        const pictures=  this.state.pictures;
-            console.log(pictures);
-            axios.put('https://api-space-explorer.herokuapp.com/api/astronauts/'+this.state.id, pictures)
+        const imgSend=  { pictures: this.state.pictures};
+        console.log(imgSend);
+           /*--------update data pictures into database------------ */
+            axios.put('https://api-space-explorer.herokuapp.com/api/astronauts/'+this.state.id, imgSend)
+
             .then(res =>{
                 console.log(res);
+                window.location.reload(res);
             })
             .catch(err =>{
                 console.log(err);
@@ -71,9 +76,10 @@ class Destination extends Component{
         
         return(
             <div className="Destination">
-                <h2>Lets Make some memories...</h2>
 
                 <div className="imageContainer">
+
+                <h2>Lets Make some memories...</h2>
                     
                     <input type="file" onChange = {this.handleImageSelection}/>
                     <button className="upload" onClick = {this.handleImageUpload}> Upload </button>
@@ -85,8 +91,10 @@ class Destination extends Component{
                             this.state.pictures.map((data,index) =>{
                                 const imgGetUrl = this.state.imgUrl + data;
                                 return(
+
                                     <div className="imageBox" key={index}>
                                         <img src={imgGetUrl} alt="hello" className="imgDisplay"/>
+
                                     </div>
                                 );
                             })
@@ -94,10 +102,10 @@ class Destination extends Component{
                     </div>
 
                     {/*-------------FOOTER------------- */}
-                    <div>
-
-                        <button className="butClass" onClick={this.handleClick}>It's Time To Go Home!! </button>        
+                    <div className="footer">
+                        <button className="btn-first1" onClick={this.handleClick}>It's Time To Go Home </button>        
                     </div>
+
 
                 </div>
             </div>

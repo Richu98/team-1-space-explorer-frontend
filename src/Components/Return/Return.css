@@ -4,27 +4,57 @@
 .Return{height:100vh;width:100%;background-image: url('../Images/earth.jpg');background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat;color: black;display: flex wrap;overflow: hidden;}
 
 
-.text{background-color: rgba(0, 0, 0, 0.5);width: fit-content;margin: auto;}
+.text{background-color: rgba(0, 0, 0, 0.5);width:100%;margin: auto;height: 100%;}
 
 .text h1{
-    font-size: 50px;color: #ffe75e;margin:0px 60px;
+    font-size: 50px;color: #b2fcff;margin:0px 60px;text-shadow: rgba(178, 252, 255, 0.4) 3px 3px;
 }
 
 .text h2{
-    font-size: 37px;color: #81f5ff;margin:0px 140px;
+    font-size: 37px;color: #ffe75e;margin:0px 70px;text-shadow: rgba(255, 231, 94, 0.3) 3px 3px;
 }
 
+.text p{
+    font-size: 30px;color: #ffffff;margin:0px 100px;text-shadow: rgba(255, 255, 255, 0.2) 3px 3px;
+}
+
+.text h4{
+    font-size: 35px;color:#ffe75e;margin:0px 70px;text-shadow: rgba(255, 231, 94, 0.3) 3px 3px;
+}
+
+
+
+.imageShow { height: 20%; width: 100%; padding:20px 20px;display: flex; justify-content:space-around; align-content: flex-start; flex-direction: row; flex-wrap: wrap;}
+.imgBox {border-radius: 20px; overflow: hidden; box-shadow: 3px 3px 8px rgba(0,0,0,0,0.4)}
+.imageDisplay {height: 150px; width:150px;}
 
 @media (max-width: 950px){
 
 .text h1{font-size:40px;margin:0px 30px;}
-.text h2{font-size:30px;margin:0px 70px;}
+.text h2{font-size:30px;margin:0px 50px;}
+.text h4{font-size:27px;margin:0px 50px;}
+.text p{font-size: 20px;margin:0px 70px;}
 
+    .imageShow {padding: 10px 10px;}
+    .imgBox {border-radius: 15px; }
+    .imageDisplay {max-height: 100px; max-width: 100px;}
 }
+
+@media (max-width: 767px){
+    .imageShow {padding: 10px 10px;}
+    .imgBox {border-radius: 15px; }
+    .imageDisplay {max-height: 80px; max-width: 80px;}
+}
+
 
 @media (max-width: 650px){
 
-    .text h1{font-size:25px;margin:0px 15px;}
-    .text h2{font-size:15px;margin:0px 75px;}
+    .text h1{font-size:20px;margin:0px 10px;}
+    .text h2{font-size:16px;margin:0px 30px;}
+    .text h4{font-size:13px;margin:0px 25px;}
+    .text p{font-size:10px;margin:0px 45px;}
+    .imageShow {padding: 10px 10px;}
+    .imgBox {border-radius: 5px; }
+    .imageDisplay {max-height: 50px; max-width: 50px;}
     
     }
