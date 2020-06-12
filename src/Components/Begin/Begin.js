@@ -118,7 +118,7 @@ class Begin extends Component {
   //---------------------------
 
   render() {
-    console.log();
+    
     return (
       <div className="Begin">
 

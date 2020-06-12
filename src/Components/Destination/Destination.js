@@ -10,11 +10,10 @@ class Destination extends Component{
     componentDidMount(){
         swal ("Your Destination Has Arrived", "Click OK to Make some Memories");
         const id = localStorage.getItem('id');
-        this.setState({id: id});
-
-        
+        this.setState({id: id});  
     }
 
+  
     state = {
         id: "",
         pictures: []
@@ -23,7 +22,6 @@ class Destination extends Component{
     handleImageSelection = (e) =>{
         this.setState({ imgAdd: e.target.files[0]})
     }
-
 
     
     handleImageUpload = (e) => {
@@ -62,9 +60,7 @@ class Destination extends Component{
             })
             .catch(err =>{
                 console.log(err);
-            })  
-
-            
+            })        
         
     }
     
@@ -90,7 +86,6 @@ class Destination extends Component{
 
                                     <div className="imageBox" key={index}>
                                         <img src={imgGetUrl} alt="hello" className="imgDisplay"/>
-
                                     </div>
                                 );
                             })
