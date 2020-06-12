@@ -57,13 +57,14 @@ class Result extends Component {
                     }
                     }
 
-
                     <div className="imageShow">
+
 
                         {
                             /*----------Rendering Image Data-------- */
                             this.state.showImage.map((data, index) => {
                                 return (
+
                                     <div className="imgBox" key={index}>
                                         <img src={this.state.imgUrl + data} alt="heloo" className="imageDisplay" />
                                     </div>
