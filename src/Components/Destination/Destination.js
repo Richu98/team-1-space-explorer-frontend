@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import swal from 'sweetalert';
+import { databasePut , imageGet , imagePost } from '../URL/URL'
 import './Destination.css';
 
 
@@ -15,10 +16,7 @@ class Destination extends Component{
     }
 
     state = {
-
-        imgUrl:'https://meetgreet-upload.herokuapp.com/images/',
         id: "",
-
         pictures: []
     }
 
@@ -27,6 +25,7 @@ class Destination extends Component{
     }
 
 
+    
     handleImageUpload = (e) => {
 
         /*----------for uploading an image--------- */
@@ -36,10 +35,9 @@ class Destination extends Component{
             headers: { 'content-type': 'multipart/form-data' } };
             
         image.append('file',this.state.imgAdd,this.state.imgAdd.name);
-        axios.post('https://meetgreet-upload.herokuapp.com/upload',image,config).then(res =>{
+        axios.post(imagePost,image,config).then(res =>{
             
             this.setState({ imgData: res.data })            
-                console.log(res.data)
             /*-------To add imgData in into array */
                 const pictures = this.state.pictures;
                 pictures.push(this.state.imgData);
@@ -53,25 +51,22 @@ class Destination extends Component{
 
     handleClick = (e) => {
         const imgSend=  { pictures: this.state.pictures};
-        console.log(imgSend);
-           /*--------update data pictures into database------------ */
-            axios.put('https://api-space-explorer.herokuapp.com/api/astronauts/pictures/'+this.state.id, imgSend)
 
+           /*--------update data pictures into database------------ */
+        console.log(imgSend);
+            axios.put(databasePut+this.state.id, imgSend)
             .then(res =>{
-                console.log("second-page",res);
+                console.log("complete...",res);
                 this.props.history.push("/Return");
-                //window.location.reload(res);
+               
             })
             .catch(err =>{
                 console.log(err);
             })  
 
-        
+            
         
     }
-
-    
-    
     
     render(){
         
@@ -90,7 +85,7 @@ class Destination extends Component{
                         {
                 /*----------Rendering Image Data-------- */
                             this.state.pictures.map((data,index) =>{
-                                const imgGetUrl = this.state.imgUrl + data;
+                                const imgGetUrl = imageGet + data;
                                 return(
 
                                     <div className="imageBox" key={index}>
@@ -113,6 +108,5 @@ class Destination extends Component{
         );
     }
 }
-
 
 export default Destination;

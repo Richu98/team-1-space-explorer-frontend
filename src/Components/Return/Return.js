@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import './Return.css';
 import axios from 'axios';
+import { databaseGet ,imageGet } from '../URL/URL'
+import './Return.css';
+
+
+
 
 class Result extends Component {
 
     state = {
         teamMembers: [],
         id: "",
-        imgUrl: 'https://meetgreet-upload.herokuapp.com/images/',
         pictures: [],
     }
 
@@ -16,18 +19,17 @@ class Result extends Component {
 
         const id = localStorage.getItem('id');
         this.setState({ id: id });
-        console.log(this.state.id);
-        axios.get('http://api-space-explorer.herokuapp.com/api/astronauts/?id=' + id).then(res => {
-            this.setState({
-                name: res.data[0].teamName ,
-                place: res.data[0].destination ,
-                teamMembers: res.data[0].teamMembers ,
-                spaceshipName: res.data[0].spaceshipName ,
-                pictures: res.data[0].pictures
-            })
-        })
 
-
+            axios.get( databaseGet + id).then(res => {
+                this.setState({
+                    name: res.data[0].teamName ,
+                    place: res.data[0].destination ,
+                    teamMembers: res.data[0].teamMembers ,
+                    spaceshipName: res.data[0].spaceshipName ,
+                    pictures: res.data[0].pictures
+                })
+                console.log("third page",res);
+            })       
     }
 
 
@@ -61,7 +63,7 @@ class Result extends Component {
                             this.state.pictures.map((data, index) => {
                                 return (
                                     <div className="imgBox" key={index}>
-                                        <img src={this.state.imgUrl + data} alt="heloo" className="imageDisplay" />
+                                        <img src={imageGet + data} alt="heloo" className="imageDisplay" />
                                     </div>
                                 );
                             })

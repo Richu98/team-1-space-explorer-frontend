@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { databasePost }from '../URL/URL';
 import './Begin.css';
 
 class Begin extends Component {
@@ -15,12 +16,10 @@ class Begin extends Component {
     destinationError: "",
     membersError: "",
     spaceshipNameError: "",
-    missionEror: ""
-
+    missionEror: "",
   }
 
-    
-  
+
   /*------Assigns values to state from Form ---------- */
   handlechange = (e) => {
     this.setState({
@@ -83,12 +82,8 @@ class Begin extends Component {
             mission: this.state.mission
           }
 
-          
-          console.log(astronauts);
-
-          axios.post('https://api-space-explorer.herokuapp.com/api/astronauts', astronauts)
+          axios.post(databasePost , astronauts)
           .then(res =>{
-            
             localStorage.setItem('id',res.data._id);  
           })
           .catch(err =>{
@@ -109,7 +104,6 @@ class Begin extends Component {
   }
 
 
-
   addPeople = (e) => {
     const isvalid = this.validateform();
     if(isvalid) {
@@ -120,13 +114,11 @@ class Begin extends Component {
       this.setState({ members: members});
     }
 
-
-
   }
   //---------------------------
 
   render() {
-
+    console.log();
     return (
       <div className="Begin">
 
@@ -192,11 +184,6 @@ class Begin extends Component {
 
                     {/*-------------------show Eror if any-------------------- */}
                     <div className="membersError"> {this.state.membersError}</div>
-                  
-
-
-
-                 
 
                     {/*----Rendering Member Data------ */}
                   {
