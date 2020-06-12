@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
 *{padding: 0%; margin: 0%;box-sizing: border-box;}
 
-
-
 body{width:100%;background-image: url('../Images/milky-way.jpg') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat;color: white;}
 
 .Begin {background-image: url('../Images/rocket.png') ;background-attachment:fixed; background-size: 200px; background-position-x: 85%; background-position-y: 50%; background-repeat: no-repeat; animation: rocket 4s linear infinite;height: 100vh;}
@@ -11,11 +9,7 @@ body{width:100%;background-image: url('../Images/milky-way.jpg') ;background-att
 @keyframes rocket {0% {background-position-y:80%}
     100% {background-position-y:10% }
 
-
 }
-
-
-
 
 .header h1{font-size: 50px;margin-left: 40px;color: #f0a500;font-family: 'Monoton', cursive;text-shadow: rgba(240, 165, 0, 0.4) 4px 4px ;}
 .header h2{font-size: 35px;margin-left: 50px;color: #f0a500;font-family: 'Monoton', cursive;text-shadow: rgba(240, 165, 0, 0.4) 4px 4px ;}
@@ -25,12 +19,9 @@ body{width:100%;background-image: url('../Images/milky-way.jpg') ;background-att
 
 input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;box-shadow:rgba(20, 30, 55, 0.6)  4px 4px ;font-family: 'Playfair Display SC', serif;font-size: large;border-radius: 25px;border: none;}
 
-
-
 .teammem{font-size:20px;color: #c2f0fc;margin-left: 5%;margin-top:10px;line-height: normal;text-shadow: none;}
 
 .btn{margin-top: 10px;padding: 15px 15px;font-size: 20px;;}
-
 
 .tError, .dError,.mError, .sError, .membersError{
     color:#deff8b;
@@ -53,7 +44,6 @@ input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;bo
 
 }
        
-
 @media (min-width: 1920px){
     .header h1{font-size: 150px;}
     .header h2{font-size: 60px;}
@@ -65,6 +55,3 @@ input[type="text"]{padding: 5px 5px;margin: 5px 20px 5px 10px ; outline: none;bo
     }
     @keyframes rocket {0% {background-position-y:50%} 100% {background-position-y:10% } }
 }
-
-
-

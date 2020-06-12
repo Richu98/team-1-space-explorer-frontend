@@ -21,6 +21,7 @@ input[type="file"] {margin-left:5%;}
 .imgShow { height: 70%; max-width: 75%; display: flex; justify-content:space-around;align-content: flex-start; flex-direction: row; flex-wrap: wrap;}
 .imageBox {border-radius: 20px; overflow: hidden; box-shadow: 2px 2px 8px 4px rgba(196, 191, 191, 0.233);height: 150px; width:250px;}
 .imgDisplay {height: inherit; width: inherit}
+
 .footer {display: flex; justify-content: center; }
 
 
