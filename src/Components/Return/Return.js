@@ -52,14 +52,15 @@ class Result extends Component {
                             );
                         })
                     }
-                
 
                     <div className="imageShow">
+
 
                         {
                             /*----------Rendering Image Data-------- */
                             this.state.pictures.map((data, index) => {
                                 return (
+
                                     <div className="imgBox" key={index}>
                                         <img src={this.state.imgUrl + data} alt="heloo" className="imageDisplay" />
                                     </div>

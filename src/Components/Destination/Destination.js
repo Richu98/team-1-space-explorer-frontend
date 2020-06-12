@@ -52,11 +52,11 @@ class Destination extends Component{
     }
 
     handleClick = (e) => {
+
         const imgSend=  { pictures: this.state.pictures};
         console.log(imgSend);
            /*--------update data pictures into database------------ */
             axios.put('https://api-space-explorer.herokuapp.com/api/astronauts/pictures/'+this.state.id, imgSend)
-
             .then(res =>{
                 console.log("second-page",res);
                 this.props.history.push("/Return");
@@ -70,9 +70,6 @@ class Destination extends Component{
         
     }
 
-    
-    
-    
     render(){
         
         return(
@@ -86,7 +83,6 @@ class Destination extends Component{
                     <button className="upload" onClick = {this.handleImageUpload}> Upload </button>
 
                     <div className="imgShow">
-
                         {
                 /*----------Rendering Image Data-------- */
                             this.state.pictures.map((data,index) =>{
@@ -103,8 +99,10 @@ class Destination extends Component{
                     </div>
 
                     {/*-------------FOOTER------------- */}
+
                     <div className="footer">
                         <button className="btn-first1" onClick={this.handleClick}>It's Time To Go Home </button>        
+
                     </div>
 
 
@@ -113,6 +111,5 @@ class Destination extends Component{
         );
     }
 }
-
 
 export default Destination;
