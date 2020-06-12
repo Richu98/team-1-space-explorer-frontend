@@ -3,10 +3,12 @@
 *{padding: 0%; margin: 0%;box-sizing: border-box;}
 
 
-.Destination{height:100vh;width:100%;background-image: url('../Images/planet.jpg') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat;}
+.Destination{height: 100vh; width:100%;background-image: url('../Images/planet.jpg') ;background-attachment:fixed; background-size:cover; background-position: center; background-repeat: no-repeat;}
+
 
 .imageContainer{background-image: url('../Images/rocket.png') ;background-attachment:fixed; background-size: 200px; background-position-x: 85%; background-position-y: 50%; background-repeat: no-repeat; animation: blink 4s linear infinite;height: 90%}
 .imageContainer h2{font-size: 35px;margin-left: 20px;color: #f0a500;font-family: 'Monoton', cursive;text-shadow: rgba(240, 165, 0, 0.4) 4px 4px ;}
+
 
 @keyframes blink {
     100% {background-position-y:80%}
@@ -15,10 +17,14 @@
 
 input[type="file"] {margin-left:5%;}
 
-.imgShow { height: 80%; max-width: 75%; display: flex; justify-content:space-around;align-content: flex-start; flex-direction: row; flex-wrap: wrap;}
-.imageBox {border-radius: 20px; overflow: hidden; box-shadow: 3px 3px 8p rgba(0,0,0,0,0.4);}
+
+.imgShow { height: 70%; max-width: 75%; display: flex; justify-content:space-around;align-content: flex-start; flex-direction: row; flex-wrap: wrap;}
+.imageBox {border-radius: 20px; overflow: hidden; box-shadow: 3px 3px 8p rgba(0,0,0,0);}
 .imgDisplay {height: 150px; width:150px;}
 .footer {display: flex; justify-content: center; }
+
+
+
 
 @media (min-width: 1920px){
 
@@ -30,7 +36,7 @@ input[type="file"] {margin-left:5%;}
 }
 
 @media (max-width: 850px){
-  
+
     .imageContainer{background-size: 20%; background-position-x: 95%; background-position-y: 30%; background-repeat: no-repeat;}
     .imageContainer h2{font-size: 15px;}
     .upload {margin:2% 5%;}
@@ -39,4 +45,3 @@ input[type="file"] {margin-left:5%;}
     .imageBox {border-radius: 5px; }
     .imgDisplay {max-height: 50px; max-width: 50px;}
 }
-
