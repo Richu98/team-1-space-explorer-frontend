@@ -18,8 +18,8 @@
 input[type="file"] {margin-left:5%;}
 
 
-.imgShow { height: 80%; max-width: 75%; display: flex; justify-content:space-around;align-content: flex-start; flex-direction: row; flex-wrap: wrap;}
-.imageBox {border-radius: 20px; overflow: hidden; box-shadow: 3px 3px 8p rgba(0,0,0,0,0.4);}
+.imgShow { height: 70%; max-width: 75%; display: flex; justify-content:space-around;align-content: flex-start; flex-direction: row; flex-wrap: wrap;}
+.imageBox {border-radius: 20px; overflow: hidden; box-shadow: 3px 3px 8p rgba(0,0,0,0);}
 .imgDisplay {height: 150px; width:150px;}
 .footer {display: flex; justify-content: center; }
 
