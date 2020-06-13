@@ -8,7 +8,7 @@ class Result extends Component {
         teamMembers: [],
         id: "",
         imgUrl: 'https://meetgreet-upload.herokuapp.com/images/',
-        showImage: [],
+        pictures: [],
     }
 
     componentDidMount() {
@@ -25,9 +25,8 @@ class Result extends Component {
                 spaceshipName: res.data[0].spaceshipName ,
                 pictures: res.data[0].pictures
             })
-            let arr = [...this.state.pictures]
-            this.setState({ showImage: arr });
-            console.log(this.state.showImage);
+            console.log(res.data);
+
         })
 
 
@@ -55,14 +54,13 @@ class Result extends Component {
                             );
                         })
                     }
-                    }
-
+                
 
                     <div className="imageShow">
 
                         {
                             /*----------Rendering Image Data-------- */
-                            this.state.showImage.map((data, index) => {
+                            this.state.pictures.map((data, index) => {
                                 return (
                                     <div className="imgBox" key={index}>
                                         <img src={this.state.imgUrl + data} alt="heloo" className="imageDisplay" />
