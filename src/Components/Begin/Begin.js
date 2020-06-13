@@ -88,8 +88,11 @@ class Begin extends Component {
 
           axios.post('https://api-space-explorer.herokuapp.com/api/astronauts', astronauts)
           .then(res =>{
-            console.log(res);
+            
             localStorage.setItem('id',res.data._id);  
+          })
+          .catch(err =>{
+            console.log(err);
           })
         
           this.props.history.push("/Destination");
@@ -216,9 +219,6 @@ class Begin extends Component {
         </div>
 
         </div>
-           
-
-
       </div>
     );
   }
