@@ -84,13 +84,16 @@ class Begin extends Component {
 
           axios.post(databasePost , astronauts)
           .then(res =>{
-            localStorage.setItem('id',res.data._id);  
+            
+            localStorage.setItem('id',res.data._id);
+
+            this.props.history.push("/Destination");
           })
           .catch(err =>{
             console.log(err);
           })
         
-          this.props.history.push("/Destination");
+      
     
       }
   }
