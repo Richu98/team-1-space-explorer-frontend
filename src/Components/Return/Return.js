@@ -16,9 +16,10 @@ class Result extends Component {
 
     componentDidMount() {
 
-
-        const id = localStorage.getItem('id');
-        this.setState({ id: id });
+            const id = localStorage.getItem('id');
+    
+    
+            this.setState({ id: id });
 
             axios.get( databaseGet + id).then(res => {
                 this.setState({
